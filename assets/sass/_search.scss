@@ -1,10 +1,17 @@
 h1, h2, p {
     color: #fff;
-    margin: 8px 0;
+    margin: 8px 0 0;
+    text-shadow: 1px 0 25px rgba(0, 76, 144, 1);
+    font-weight: 400;
+}
+
+h2 {
+    font-size: 2.2rem;
 }
 
 h1 {
-    font-size: 26px;
+    font-size: 1.9rem;
+
 }
 
 input {
@@ -15,6 +22,8 @@ input {
     border: none;
     background-color: rgba(255, 255, 255, 0.5);
     color: #418DD3;
+    border-right: 2px solid #418DD3;
+    border-bottom: 2px solid #418DD3;
 }
 
 button {
