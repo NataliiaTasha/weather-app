@@ -1,0 +1,43 @@
+h1, h2, p {
+    color: #fff;
+    margin: 8px 0;
+}
+
+h1 {
+    font-size: 26px;
+}
+
+input {
+    width: calc(100% - 20px);
+    padding: 5px;
+    font-size: 0.9rem;
+    border-radius: 10px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #418DD3;
+}
+
+button {
+background: none;
+border: none;
+padding: 10px;
+filter: brightness(0) saturate(100%) invert(58%) sepia(10%) saturate(3222%) hue-rotate(171deg) brightness(86%) contrast(91%);
+cursor: pointer;
+transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(120%);
+    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7500%) hue-rotate(130deg) brightness(101%) contrast(105%);
+}
+
+::placeholder {
+    color: #418DD3;
+}
+
+::-ms-input-placeholder {
+    color: #418DD3;
+}
+
+
+

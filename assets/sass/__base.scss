@@ -1,0 +1,55 @@
+// * {
+//     margin: 0;
+// }
+
+body {
+    // background-image: url("https://unsplash.com/photos/green-yellow-and-pink-abstract-painting-kKyxIwvljBg");
+    background-size: cover;
+    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+    margin: 0;
+    background: #99adc0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.weather-container {
+    background-image: radial-gradient(circle at top center, #BCDFFF, #418DD3);
+    border-radius: 20px;
+    width: 400px;
+    padding: 20px;
+    box-shadow: 0 5px 10px rgba (0, 0, 0, 1);
+    backdrop-filter: blur;
+    text-align: center;
+    margin: 0 auto;   
+}
+
+#forecast {
+margin-top: 50px;
+overflow-x: auto;
+white-space: nowrap;
+display: flex;
+justify-content: space-between;
+}
+
+.forecast-item {
+    flex: 0 0 auto;
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 10px;
+    color: #fff;
+}
+
+.forecast-item img {
+    width: 30px;
+    margin-bottom: 5px;
+}
+
+#forecast-heading {
+    color: #fff;
+    margin-top: 10px;
+}
