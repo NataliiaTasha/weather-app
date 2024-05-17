@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather App</title>
+    <title>MeteoMagic</title>
     <link rel="icon" href="assets/images/sun.svg">
     <link rel="stylesheet" href="assets/css/style.css">
     <script defer type="module" src="assets/js/script.js"></script>
@@ -13,9 +13,14 @@
 
 <body>
     <div class="weather-container">
-        <h1>Your weather</h1>
-        <input type="text" id="cityInput" placeholder="Enter a city">
-        <button id="search-button"><img src="assets/images/search.svg" alt="search icon"></button>
+        <h1>MeteoMagic</h1>
+        <!-- <input type="text" id="cityInput" placeholder="Enter a city">
+        <button id="search-button"><img src="assets/images/search.svg" alt="search icon"></button> -->
+        <div class="search">
+            <input type="text" id="cityInput" placeholder="Enter a city">
+            <button id="search-button"><img src="assets/images/search.svg" alt="search icon"></button>
+        </div>
+
         <div class="weather-info">
             <h2 id="city"></h2>
             <img id="weather-icon">

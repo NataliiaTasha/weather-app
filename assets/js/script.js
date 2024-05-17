@@ -35,8 +35,6 @@ button.addEventListener("click", function () {
     }
 });
 
-
-
 cityInput.addEventListener("keyup", function (event) {
     const city = cityInput.value;
     if (event.key === "Enter") {
@@ -47,6 +45,8 @@ cityInput.addEventListener("keyup", function (event) {
         saveCityToLocalStorage(city);
     }
 });
+
+
 
 
 

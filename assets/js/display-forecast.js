@@ -21,8 +21,13 @@ export function displayForecast(forecastData) {
         const forecastDate = new Date(forecast.dt * 1000);
         const forecastElement = document.createElement("div");
         forecastElement.classList.add("forecast-item");
+        const weekdayElement = document.createElement("p");
+        weekdayElement.textContent = forecastDate.toLocaleDateString("en-GB", { weekday: "short" });//show the day of the week
         const dateElement = document.createElement("p");
-        dateElement.textContent = forecastDate.toLocaleDateString("en-GB", { weekday: "short" });//show the day of the week
+        const day = forecastDate.getDate();
+        const month = forecastDate.getMonth();
+        dateElement.textContent = `${day}/${month}`;//show the date
+
         const forecastIconElement = document.createElement("img");
         forecastIconElement.src = `https://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png`;
         forecastIconElement.alt = forecast.weather[0].description;
@@ -32,7 +37,7 @@ export function displayForecast(forecastData) {
         const humidityContainer = document.createElement("div");
         humidityContainer.classList.add("humidityDiv");
         const humidityIcon = document.createElement("img");
-        humidityIcon.src = "../assets/images/humidity.svg";
+        humidityIcon.src = "assets/images/humidity.svg";
         humidityIcon.classList.add("humidity");
         const humidity = document.createElement("p");
         humidity.textContent = `${forecast.main.humidity}`;
@@ -40,6 +45,7 @@ export function displayForecast(forecastData) {
         humidityContainer.appendChild(humidityIcon);
         humidityContainer.appendChild(humidity);
 
+        forecastElement.appendChild(weekdayElement);
         forecastElement.appendChild(dateElement);
         forecastElement.appendChild(forecastIconElement);
         forecastElement.appendChild(forecastTemperatureElement);

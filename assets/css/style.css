@@ -4,7 +4,7 @@
 
 body {
   background-image: radial-gradient(circle at top center, rgb(188, 223, 255), rgb(65, 141, 211));
-  min-height: 100vh;
+  height: 100vh;
   background-image: url("/assets/images/brian-mcgowan-kKyxIwvljBg-unsplash.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -28,29 +28,44 @@ body {
   border-bottom: 2px solid rgb(188, 223, 255);
 }
 
+@media (max-width: 460px) {
+  body {
+    width: 100vw;
+    background-position: center;
+  }
+  h1 {
+    margin: 10dvh 0 2dvh;
+  }
+  .weather-container {
+    background-image: radial-gradient(circle at top center, rgba(188, 223, 255, 0.7), rgba(65, 141, 211, 0.7));
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+    border: none;
+  }
+}
 h2, p {
   color: #fff;
-  margin: 8px 0 0;
   text-shadow: 1px 0 25px rgb(0, 76, 144);
   font-weight: 400;
 }
 
 h2 {
   font-size: 2.2rem;
-  margin: 8px 0;
+  margin: 1dvh 0;
 }
 
 h1 {
   font-size: 1.9rem;
   text-shadow: 1px 0 25px rgb(0, 76, 144);
   font-weight: 400;
-  margin: 5px 0 10px;
+  margin: 1dvh 0 2dvh;
 }
 
-input[type=text] {
+input {
   width: calc(100% - 20px);
   padding: 5px;
-  font-size: 0.9rem;
+  font-size: 1rem;
   border-radius: 10px;
   border: none;
   background-color: rgba(255, 255, 255, 0.5);
@@ -67,12 +82,23 @@ input:focus {
 button {
   background: none;
   border: none;
-  padding: 10px;
   filter: brightness(0) saturate(100%) invert(58%) sepia(10%) saturate(3222%) hue-rotate(171deg) brightness(86%) contrast(91%);
   cursor: pointer;
   transition: 0.3s;
+  position: absolute;
+  right: 2%;
+  top: 10%;
 }
 
+@media (max-width: 1024) {
+  button {
+    transition: 0s;
+  }
+  button:hover {
+    transform: scale(100%);
+    filter: brightness(0) saturate(100%) invert(58%) sepia(10%) saturate(3222%) hue-rotate(171deg) brightness(86%) contrast(91%);
+  }
+}
 button:hover {
   transform: scale(120%);
   filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7500%) hue-rotate(130deg) brightness(101%) contrast(105%);
@@ -90,8 +116,13 @@ button:hover {
   color: #418DD3;
 }
 
+.search {
+  position: relative;
+}
+
 #temperature {
   font-size: 50px;
+  margin: 1dvh 0;
 }
 
 #weather-icon {
@@ -129,7 +160,7 @@ button:hover {
 .forecast-icon {
   width: 55px;
   margin-bottom: 0;
-  margin-top: -5px;
+  margin-top: 8x;
 }
 
 .humidityDiv {
@@ -141,7 +172,7 @@ button:hover {
 
 .humidityDiv p {
   text-shadow: 1px 0 25px rgb(0, 76, 144);
-  margin: 8px 0;
+  margin: 3px 0;
 }
 
 .humidity {
