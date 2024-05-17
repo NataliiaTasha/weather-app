@@ -26,15 +26,24 @@ export function displayForecast(forecastData) {
         const forecastIconElement = document.createElement("img");
         forecastIconElement.src = `https://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png`;
         forecastIconElement.alt = forecast.weather[0].description;
+        forecastIconElement.classList.add("forecast-icon");
         const forecastTemperatureElement = document.createElement("p");
         forecastTemperatureElement.textContent = `${Math.round(forecast.main.temp)}°C`;
-        const tempMinMax = document.createElement("p");
-        tempMinMax.textContent = `${Math.round(forecast.main.temp_min)}-${Math.round(forecast.main.temp_max)}°C`;
+        const humidityContainer = document.createElement("div");
+        humidityContainer.classList.add("humidityDiv");
+        const humidityIcon = document.createElement("img");
+        humidityIcon.src = "../assets/images/humidity.svg";
+        humidityIcon.classList.add("humidity");
+        const humidity = document.createElement("p");
+        humidity.textContent = `${forecast.main.humidity}`;
+
+        humidityContainer.appendChild(humidityIcon);
+        humidityContainer.appendChild(humidity);
 
         forecastElement.appendChild(dateElement);
         forecastElement.appendChild(forecastIconElement);
         forecastElement.appendChild(forecastTemperatureElement);
-        forecastElement.appendChild(tempMinMax);
+        forecastElement.appendChild(humidityContainer);
 
         forecastDiv.appendChild(forecastElement);
     }

@@ -37,9 +37,9 @@ button.addEventListener("click", function () {
 
 
 
-button.addEventListener("keyup", function (event) {
+cityInput.addEventListener("keyup", function (event) {
     const city = cityInput.value;
-    if (event.key === "Enter" && city) {
+    if (event.key === "Enter") {
         getWeather(city);
         getForecast(city)
         displayForecast(city);

@@ -3,13 +3,15 @@
 }
 
 body {
+    background-image: radial-gradient(circle at top center, rgba(188, 223, 255, 1), rgba(65, 141, 211, 1));
+    min-height: 100vh;
+    background-image: url("/assets/images/brian-mcgowan-kKyxIwvljBg-unsplash.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     // height: 100vh;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #fff;
     margin: 0;
-    background: #99adc0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -19,12 +21,11 @@ body {
     background-image: radial-gradient(circle at top center, rgba(188, 223, 255, 0.8), rgba(65, 141, 211, 0.8));
     border-radius: 20px;
     width: 400px;
-    padding: 20px;
+    padding: 12px;
+    // padding-top: 12px;
     box-shadow: 0 5px 10px rgba (0, 0, 0, 1);
-    backdrop-filter: blur;
     text-align: center;
-    margin: 20px auto;   
+    margin: 20px auto;
     border-right: 2px solid rgba(188, 223, 255, 1);
     border-bottom: 2px solid rgba(188, 223, 255, 1);
 }
-

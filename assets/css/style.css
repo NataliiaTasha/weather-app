@@ -3,12 +3,14 @@
 }
 
 body {
+  background-image: radial-gradient(circle at top center, rgb(188, 223, 255), rgb(65, 141, 211));
+  min-height: 100vh;
+  background-image: url("/assets/images/brian-mcgowan-kKyxIwvljBg-unsplash.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: #fff;
   margin: 0;
-  background: #99adc0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -18,17 +20,15 @@ body {
   background-image: radial-gradient(circle at top center, rgba(188, 223, 255, 0.8), rgba(65, 141, 211, 0.8));
   border-radius: 20px;
   width: 400px;
-  padding: 20px;
+  padding: 12px;
   box-shadow: 0 5px 10px rgba 0, 0, 0, 1;
-  -webkit-backdrop-filter: blur;
-          backdrop-filter: blur;
   text-align: center;
   margin: 20px auto;
   border-right: 2px solid rgb(188, 223, 255);
   border-bottom: 2px solid rgb(188, 223, 255);
 }
 
-h1, h2, p {
+h2, p {
   color: #fff;
   margin: 8px 0 0;
   text-shadow: 1px 0 25px rgb(0, 76, 144);
@@ -37,13 +37,17 @@ h1, h2, p {
 
 h2 {
   font-size: 2.2rem;
+  margin: 8px 0;
 }
 
 h1 {
   font-size: 1.9rem;
+  text-shadow: 1px 0 25px rgb(0, 76, 144);
+  font-weight: 400;
+  margin: 5px 0 10px;
 }
 
-input {
+input[type=text] {
   width: calc(100% - 20px);
   padding: 5px;
   font-size: 0.9rem;
@@ -53,6 +57,11 @@ input {
   color: #418DD3;
   border-right: 2px solid #418DD3;
   border-bottom: 2px solid #418DD3;
+}
+
+input:focus {
+  border: 1px solid #418DD3;
+  color: #418DD3;
 }
 
 button {
@@ -83,15 +92,23 @@ button:hover {
 
 #temperature {
   font-size: 50px;
-  margin-top: -20px;
 }
 
-p {
-  text-shadow: 1px 0 25px rgb(0, 76, 144);
+#weather-icon {
+  width: 100px;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box;
+  filter: drop-shadow(1px 0 25px rgb(0, 76, 144));
+  z-index: 1;
+}
+
+#city {
+  z-index: 2;
 }
 
 #forecast {
-  margin-top: 50px;
+  margin-top: 30px;
   overflow-x: auto;
   white-space: nowrap;
   display: flex;
@@ -99,23 +116,36 @@ p {
 }
 
 .forecast-item {
-  flex: 0 0 auto;
   width: 85px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  align-content: baseline;
   margin-right: 10px;
   color: #fff;
   font-size: 1.1rem;
 }
 
-.forecast-item img {
+.forecast-icon {
   width: 55px;
-  margin-bottom: 5px;
+  margin-bottom: 0;
   margin-top: -5px;
 }
 
-#forecast-heading {
-  color: #fff;
-  margin-top: 10px;
+.humidityDiv {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.humidityDiv p {
+  text-shadow: 1px 0 25px rgb(0, 76, 144);
+  margin: 8px 0;
+}
+
+.humidity {
+  height: 20px;
+  margin: 8px 0;
+  padding-right: 2px;
 }/*# sourceMappingURL=style.css.map */

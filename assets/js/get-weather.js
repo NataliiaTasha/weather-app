@@ -16,7 +16,8 @@ export function getWeather(city) {
         temperatureElement.textContent = `${Math.round(data.main.temp)}°C`;
         feelsLike.textContent = `Feels like ${Math.round(data.main.feels_like)}°C`;
         descriptionElement.textContent = data.weather[0].description;
-        iconElement.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+        // iconElement.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+        iconElement.src = `./assets/images/weather-icons/${data.weather[0].icon}.png`;
         iconElement.alt = data.weather[0].description;
     })
     .catch(error => {
