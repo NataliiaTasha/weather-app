@@ -5,7 +5,7 @@
 body {
   background-image: radial-gradient(circle at top center, rgb(188, 223, 255), rgb(65, 141, 211));
   height: 100vh;
-  background-image: url("/assets/images/brian-mcgowan-kKyxIwvljBg-unsplash.jpg");
+  background-image: url("../images/brian-mcgowan-kKyxIwvljBg-unsplash.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
