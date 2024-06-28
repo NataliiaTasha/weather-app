@@ -11,7 +11,7 @@ MeteoMagic is a sleek and intuitive web application for weather forecasting. It 
 
 ## Demo
 
-Check out a live demo of MeteoMagic [here](#).
+Check out a live demo of MeteoMagic [here](https://nataliiatasha.github.io/weather-app/).
 
 ## Screenshots
 
