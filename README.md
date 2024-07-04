@@ -5,7 +5,7 @@ MeteoMagic is a sleek and intuitive web application for weather forecasting. It 
 ## Features
 
 - **Current Weather:** Get real-time weather information for any city.
-- **5-Day Forecast:** View a 7-day weather forecast.
+- **5-Day Forecast:** View a 5-day weather forecast.
 - **City Images:** Enjoy beautiful images of cities, fetched from Unsplash.
 - **User-Friendly Interface:** Clean and responsive design for an optimal user experience.
 
